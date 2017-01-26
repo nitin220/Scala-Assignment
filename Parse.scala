@@ -15,7 +15,7 @@ object URL
 		}
 		val stringParam=inner("",listParams.toList)
 		val finalParams=stringParam slice(0,stringParam.length-1)
-		val result:String=protocol+"://"+domain+path+"?"+finalParams
+		val result:String=protocol+":"+domain+path+"?"+finalParams
 		result
 	}
 	def unapply(url:String)=//:Option[(String,String,String,Map[String,String])]=
